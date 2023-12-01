@@ -1,0 +1,17 @@
+{
+  "name": "tsboot-app",
+  "module": "lib/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build ./lib/index.ts --outdir=dist --target bun"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}
