@@ -18,4 +18,13 @@ export class ExampleController {
       `${this.helloWorld}\n${JSON.stringify(pathParams)}\n${JSON.stringify(queryParams)}`
     );
   }
+
+  @route('POST', '/hello/:id')
+  async handlePost({ request, pathParams }: RequestHandlerParam) {
+    // const json = await request.json();
+    const text = await request.text();
+    const responseText = `${pathParams['id']}: ${text}`;
+    console.log(responseText)
+    return new Response(responseText)
+  }
 }
